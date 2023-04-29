@@ -6,7 +6,7 @@ const todoRouter = createTRPCRouter({
   all: publicProcedure.query(({ ctx }) => {
     return ctx.prisma.todo.findMany({
       where: {
-        userId: ctx.auth.userId,
+        userId: ctx.auth.userId as string,
       },
     });
   }),
