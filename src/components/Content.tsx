@@ -49,6 +49,7 @@ export default function Content() {
         const index = newData.findIndex((item) => item.id === id);
 
         if (index > -1) {
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
           newData[index]!.completed = completed;
         }
 
